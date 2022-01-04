@@ -3,9 +3,9 @@
 A reasonably complete and well-tested golang port of [Kenneth Reitz][kr]'s
 [httpbin][httpbin-org] service, with zero dependencies outside the go stdlib.
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/mccutchen/go-httpbin/v2)](https://pkg.go.dev/github.com/mccutchen/go-httpbin/v2)
-[![Build status](https://github.com/mccutchen/go-httpbin/actions/workflows/continuous_delivery.yaml/badge.svg)](https://github.com/mccutchen/go-httpbin/actions/workflows/continuous_delivery.yaml)
-[![Coverage](https://codecov.io/gh/mccutchen/go-httpbin/branch/main/graph/badge.svg)](https://codecov.io/gh/mccutchen/go-httpbin)
+[![GoDoc](https://pkg.go.dev/badge/github.com/jvns/go-httpbin/v2)](https://pkg.go.dev/github.com/jvns/go-httpbin/v2)
+[![Build status](https://github.com/jvns/go-httpbin/actions/workflows/continuous_delivery.yaml/badge.svg)](https://github.com/jvns/go-httpbin/actions/workflows/continuous_delivery.yaml)
+[![Coverage](https://codecov.io/gh/jvns/go-httpbin/branch/main/graph/badge.svg)](https://codecov.io/gh/jvns/go-httpbin)
 
 
 ## Usage
@@ -47,13 +47,13 @@ Docker images are published to [Docker Hub][docker-hub]:
 
 ```bash
 # Run http server
-$ docker run -P mccutchen/go-httpbin
+$ docker run -P jvns/go-httpbin
 
 # Run https server
-$ docker run -e HTTPS_CERT_FILE='/tmp/server.crt' -e HTTPS_KEY_FILE='/tmp/server.key' -p 8080:8080 -v /tmp:/tmp mccutchen/go-httpbin
+$ docker run -e HTTPS_CERT_FILE='/tmp/server.crt' -e HTTPS_KEY_FILE='/tmp/server.key' -p 8080:8080 -v /tmp:/tmp jvns/go-httpbin
 ```
 
-The `github.com/mccutchen/go-httpbin/httpbin/v2` package can also be used as a
+The `github.com/jvns/go-httpbin/httpbin/v2` package can also be used as a
 library for testing an applications interactions with an upstream HTTP service,
 like so:
 
@@ -67,7 +67,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mccutchen/go-httpbin/v2/httpbin"
+	"github.com/jvns/go-httpbin/v2/httpbin"
 )
 
 func TestSlowResponse(t *testing.T) {
@@ -92,13 +92,13 @@ func TestSlowResponse(t *testing.T) {
 To add go-httpbin to an existing golang project:
 
 ```
-go get -u github.com/mccutchen/go-httpbin/v2
+go get -u github.com/jvns/go-httpbin/v2
 ```
 
 To install the `go-httpbin` binary:
 
 ```
-go install github.com/mccutchen/go-httpbin/v2/cmd/go-httpbin
+go install github.com/jvns/go-httpbin/v2/cmd/go-httpbin
 ```
 
 
@@ -146,4 +146,4 @@ make imagepush
 [httpbin-org]: https://httpbin.org/
 [httpbin-repo]: https://github.com/kennethreitz/httpbin
 [ahmet]: https://github.com/ahmetb/go-httpbin
-[docker-hub]: https://hub.docker.com/r/mccutchen/go-httpbin/
+[docker-hub]: https://hub.docker.com/r/jvns/go-httpbin/

@@ -21,7 +21,7 @@ path was (carelessly) renamed to
 
 _That_ change had a number of unintended consequences:
 
- * It broke existing workflows built around `go get github.com/mccutchen/go-httpbin/cmd/go-httpbin`,
+ * It broke existing workflows built around `go get github.com/jvns/go-httpbin/cmd/go-httpbin`,
    as suggested in the README
 
  * It broke the Makefile, which was still looking for `cmd/go-httpbin`
@@ -35,4 +35,4 @@ package here and shared between the other two.
 
 (This is pretty dumb, I know, but it seems to work.)
 
-[pr17]: https://github.com/mccutchen/go-httpbin/pull/17
+[pr17]: https://github.com/jvns/go-httpbin/pull/17

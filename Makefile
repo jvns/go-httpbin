@@ -6,7 +6,7 @@ VERSION ?= $(shell git rev-parse --short HEAD)
 
 # Override these values to deploy to a different Cloud Run project
 GCLOUD_PROJECT ?= httpbingo
-GCLOUD_ACCOUNT ?= mccutchen@gmail.com
+GCLOUD_ACCOUNT ?= jvns@gmail.com
 GCLOUD_REGION  ?= us-central1
 
 # The version tag for the Cloud Run deployment (override this to adjust
@@ -17,7 +17,7 @@ GCLOUD_TAG ?= "v-$(VERSION)"
 GCLOUD_COMMAND ?= ./bin/gcloud
 
 # We push docker images to both docker hub and gcr.io
-DOCKER_TAG_DOCKERHUB ?= mccutchen/go-httpbin:$(VERSION)
+DOCKER_TAG_DOCKERHUB ?= jvns/go-httpbin:$(VERSION)
 DOCKER_TAG_GCLOUD    ?= gcr.io/$(GCLOUD_PROJECT)/go-httpbin:$(VERSION)
 
 # Built binaries will be placed here
