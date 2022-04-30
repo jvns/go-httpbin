@@ -65,6 +65,7 @@ func (h *HTTPBin) RequestWithBody(w http.ResponseWriter, r *http.Request) {
 		Headers: getRequestHeaders(r),
 		Origin:  getClientIP(r),
 		URL:     getURL(r).String(),
+		Method:  r.Method,
 	}
 
 	err := parseBody(w, r, resp)
